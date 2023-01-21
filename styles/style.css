@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+
+body{
+    background-color: var(--gray);
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+    overflow: hidden;
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+:root {
+	--bright-orange: hsl(31, 77%, 52%);
+	--dark-cyan: hsl(184, 100%, 22%);
+	--very-dark-cyan: hsl(179, 100%, 13%);
+	--white: hsla(0, 0%, 100%, 0.75);
+	--gray: hsl(0, 0%, 95%);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section{
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3.4rem;
+    max-width: 28rem;
+    padding-block: 4.8rem;
+	padding-left: 4.8rem;
+	padding-right: 3.2rem;
+    color: transparent;
+}
+
+.sedans{
+    background: hsl(31, 77%, 52%);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    
+}
+
+.suvs{
+    background: hsl(184, 100%, 22%);
+}
+
+.luxury{
+    background: hsl(179, 100%, 13%);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.header{
+    color: var(--gray);
+    font-size: 3.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Big Shoulders Display", cursive;
+}
+
+.description{
+    color: var(--white);
+    line-height: 1.5;
+    margin-bottom: 3.2rem;
+}
+
+.btn,
+.btn:link,
+.btn:visited{
+    display: block;
+    background-color: var(--gray);
+    text-decoration: none;
+    padding: 1.2rem 2.8rem;
+    border-radius: 50px;
+    transition: all 0.4s;
+}
+
+.btn:is(:hover, :active){
+    box-shadow: inset 0 0 0 2px var(--gray);
+}
+
+.btn,
+.btn.first:link,
+.btn.first:visited{
+    color: var(--bright-orange);
+}
+
+.btn.first:hover,
+.btn.first:active {
+    color: var(--gray);
+    background-color: var(--bright-orange);
+}
+
+.btn,
+.btn.second:link,
+.btn.second:visited{
+    color: var(--dark-cyan);
+}
+
+.btn.second:hover,
+.btn.second:active {
+    color: var(--gray);
+    background-color: var(--dark-cyan);
+}
+
+.btn,
+.btn.last:link,
+.btn.last:visited{
+    color: var(--very-dark-cyan);
+}
+
+.btn.last:hover,
+.btn.last:active {
+    color: var(--gray);
+    background-color: var(--very-dark-cyan);
+}
+
+@media (max-width: 57em){
+    body{
+        margin-block: 6.4rem;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    .sedans {
+        border-bottom-left-radius: 0;
+		border-top-right-radius: 1rem;
+		border-top-left-radius: 1rem;
+	}
+
+	.luxury {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 1rem;
+		border-bottom-left-radius: 1rem;
+	}
+
+	.btn,
+	.btn:is(:link, :visited) {
+		padding-inline: 3.6rem;
+	}
+
+	.description {
+		margin: 0;
+	}
+}
